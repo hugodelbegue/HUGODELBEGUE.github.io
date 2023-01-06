@@ -79,9 +79,10 @@ const app = createApp(
                     { id: 7, src__img: './assets/images/avatar-anna-kim.webp', name: 'Anna Kim', text: 'left the group', link: 'Chess Club', time: '2 weeks ago', src__pic: '', text__comment: '' }
                 ],
                 likes: [
+                    // Likes by default
                     { id: 1, src__img: './assets/images/avatar-mark-webber.webp', name: 'Mark Webber', text: 'reacted to your recent post', link: 'My first tournament today!', time: '1m ago', src__pic: '', text__comment: '' },
                     { id: 2, src__img: './assets/images/avatar-angela-gray.webp', name: 'Angela Gray', text: 'followed you', link: '', time: '5m ago', src__pic: '', text__comment: '' },
-                    { id: 3, src__img: './assets/images/avatar-jacob-thompson.webp', name: 'Jacob Thompson', text: 'has joined your group', link: 'Chess Club', time: '1 day ago', src__pic: '', text__comment: '' },
+                    { id: 3, src__img: './assets/images/avatar-jacob-thompson.webp', name: 'Jacob Thompson', text: 'has joined your group', link: 'Chess Club', time: '1 day ago', src__pic: '', text__comment: '' }
                 ],
             }
         },
