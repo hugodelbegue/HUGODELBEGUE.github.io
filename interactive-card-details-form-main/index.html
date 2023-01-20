@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Interactive card details form</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .attribution::after {
+        content: url(./assets/images/smile.png);
+        display: block;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div class="container__main">
+          <div class="container__creditcard">
+            <div class="creditcard__front creditcard__size">
+              <div class="creditcard__logo">
+                <img
+                  src="./assets/images/card-logo.svg"
+                  alt="logo credit card"
+                />
+              </div>
+              <div class="creditcard__infos">
+                <div v-if="inputs.number == ''" class="creditcard__num">
+                  {{ inputs__default.default__num }}
+                </div>
+                <div v-else class="creditcard__num">{{ numberSpaces }}</div>
+                <div class="creditcard__name__date">
+                  <div v-if="inputs.name == ''" class="creditcard__name">
+                    {{ inputs__default.default__name }}
+                  </div>
+                  <div v-else class="creditcard__name">{{ inputs.name }}</div>
+                  <div
+                    v-if="inputs.month == '' && inputs.year == ''"
+                    class="creditcard__date"
+                  >
+                    {{ inputs__default.default__month }}/{{
+                    inputs__default.default__year }}
+                  </div>
+                  <div v-else class="creditcard__date">
+                    {{ inputs.month }}/{{ inputs.year }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="creditcard__back creditcard__size">
+              <div v-if="inputs.cvc == ''" class="creditcard__secretnum">
+                {{ inputs__default.default__cvc }}
+              </div>
+              <div v-else class="creditcard__secretnum">{{ inputs.cvc }}</div>
+            </div>
+          </div>
+          <div class="container__form">
+            <!-- Part form -->
+            <div class="form">
+              <form
+                @submit.prevent="validForm"
+                id="form"
+                action=""
+                method="post"
+              >
+                <!-- Part complete -->
+                <div v-if="valid" class="complete wrapper">
+                  <div class="complete__logo">
+                    <img
+                      src="./assets/images/icon-complete.svg"
+                      alt="logo complete"
+                    />
+                  </div>
+                  <div class="complete__thank">Thank you!</div>
+                  <div class="complete__text">
+                    We've added your card details
+                  </div>
+                  <div class="input__confirm complete__continue">
+                    <input @click="reload" type="button" value="Continue" />
+                  </div>
+                </div>
+                <!-- Part inputs -->
+                <div v-else class="wrapper">
+                  <div class="input__name">
+                    <label for="name">Cardholder Name</label>
+                    <input
+                      ref="nam"
+                      @keydown.up.right.down.left="focusInputs('nam')"
+                      v-model="inputs.name"
+                      :class="[className, borderName]"
+                      type="text"
+                      name="name"
+                      maxlength="30"
+                      placeholder="e.g. Jane Appleseed"
+                    />
+                    <div class="errors">
+                      <span v-if="noName && inputs.name == ''"
+                        >Can't be blank</span
+                      >
+                      <span v-if="nameChecked.length < 2 && inputs.name != ''"
+                        >Minimum 2 letters</span
+                      >
+                    </div>
+                  </div>
+                  <div class="input__number">
+                    <label for="number">Card Number</label>
+                    <input
+                      ref="num"
+                      @keydown.up.right.down.left="focusInputs('num')"
+                      v-model="inputs.number"
+                      :class="[classNumber, borderNumber]"
+                      type="text"
+                      name="number"
+                      maxlength="16"
+                      placeholder="e.g. 1234 5678 9123 0000"
+                    />
+                    <div class="errors">
+                      <span v-if="noNumber && inputs.number == ''"
+                        >Can't be blank</span
+                      >
+                      <span v-if="isNaN(numberChecked) && inputs.number != ''"
+                        >Wrong format, numbers only</span
+                      >
+                      <span
+                        v-if="inputs.number != '' && this.inputs.number.length < 16"
+                        >Minimum 16 digits</span
+                      >
+                    </div>
+                  </div>
+                  <div class="input__expireDate">
+                    <label for="expireDate">Exp. Date (MM/YY)</label>
+                    <div class="select__expireDate">
+                      <input
+                        ref="mon"
+                        @keydown.up.right.down.left="focusInputs('mon')"
+                        v-model="inputs.month"
+                        :class="[classMonth, borderMonth]"
+                        type="text"
+                        name="month"
+                        id=""
+                        maxlength="2"
+                        placeholder="MM"
+                      />
+                      <input
+                        ref="yea"
+                        @keydown.up.right.down.left="focusInputs('yea')"
+                        v-model="inputs.year"
+                        :class="[classYear, borderYear]"
+                        type="text"
+                        name="year"
+                        id=""
+                        maxlength="2"
+                        placeholder="YY"
+                      />
+                    </div>
+                    <div class="errors">
+                      <span
+                        v-if="(noMonth && inputs.month == '') || (noYear && inputs.year == '')"
+                        >Can't be blank</span
+                      >
+                      <span
+                        v-if="monthChecked > 12 || (isNaN(monthChecked) && inputs.month != '') || (isNaN(yearChecked) && inputs.year != '')"
+                        >Incorrect entry</span
+                      >
+                    </div>
+                  </div>
+                  <div class="input__cvc">
+                    <label for="cvc">CVC</label>
+                    <input
+                      ref="cvc"
+                      @keydown.up.right.down.left="focusInputs('cvc')"
+                      v-model="inputs.cvc"
+                      :class="[classCvc, borderCvc]"
+                      type="text"
+                      name="cvc"
+                      maxlength="3"
+                      placeholder="e.g. 123"
+                    />
+                    <div class="errors">
+                      <span v-if="noCvc && inputs.cvc == ''"
+                        >Can't be blank</span
+                      >
+                      <span v-if="isNaN(cvcChecked) && inputs.cvc != ''"
+                        >Incorrect entry</span
+                      >
+                      <span
+                        v-if="this.inputs.cvc.length < 3 && inputs.cvc != ''"
+                        >Minimum 3 digits</span
+                      >
+                    </div>
+                  </div>
+                  <div class="input__confirm">
+                    <input ref="con" type="submit" value="Confirm" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution">
+      <!-- Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >.  -->
+      Coded by <a href="https://primalprod.fr/">Hugo Delbegue</a>.
+    </div>
+    <script src="./assets/js/app.js" type="module"></script>
+  </body>
+</html>
