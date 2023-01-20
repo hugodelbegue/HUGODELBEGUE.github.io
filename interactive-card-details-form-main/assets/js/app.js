@@ -33,9 +33,9 @@ createApp({
             valid: false
         }
     },
-    // mounted() {
-    //     this.$refs.nam.focus()
-    // },
+    mounted() {
+        this.$refs.nam.focus()
+    },
     computed: {
         // Adding spaces in the number entry view
         numberSpaces() {
