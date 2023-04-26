@@ -11,8 +11,16 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" href="./assets/img/logo_vue.svg" />
     <title>Vue</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
   </head>
-
   <body>
     <div id="app">
       <!-- menu -->
@@ -41,7 +49,6 @@
           </li>
         </ul>
       </nav>
-
       <main>
         <!-- body -->
         <div class="main__description">
@@ -56,11 +63,9 @@
         </div>
       </footer>
     </div>
-
     <script type="text/x-template" id="home">
       <div class="home__container">
        <h1>Articles</h1>
-
            <!-- search bar -->
            <input v-model="searchKey"
                   type="search"
@@ -69,8 +74,6 @@
                   autocomplete="off">
            <span v-if="searchKey && filteredList.length >= 1">{{ filteredList.length }} résultat<span v-if="filteredList.length >= 2">s</span></span>
            <span v-if="filteredList.length == []">Aucuns résultats</span>
-
-
            <div class="card__wrap__container">
 
                <!-- cards -->
@@ -116,7 +119,6 @@
                           </div>
                       </div>
                     </div>
-
                     <Transition name="animation__cards">
                       <!-- items -->
                       <div v-if="card.length > 0" class="shopping__container" id="popup">
@@ -126,11 +128,8 @@
                             <button @click="showPopup" class="button__open">></button>
                         </div>
                             <TransitionGroup name="animation__items" tag="div" class="overflow">
-
                               <div v-for="(items, id) in card" v-bind:key="items.id" class="items__container">
-
                                     <img v-bind:src="items.img" alt="photos shopping" class="card__img">
-
                                     <div class="items__text">
                                       <div class="text">
                                       <span class="items__text__description">{{ items.description }}</span>
@@ -145,24 +144,22 @@
                                       </div>
                                     </div>
                                   </div>
-
                                 </TransitionGroup>
-
                                   <div id="total__container">Total
                                     <div class="total">
                                       <h3>Articles: {{ totalQuantity }}</h3>
                                       <h3 class="total__points">{{ totalPointsAmount }} €</h3>
                                     </div>
                                   </div>
-
                             </div>
                       </Transition>
-
                   </div>
             </div>
     </script>
+    <div class="attribution">
+      Coded by <a href="https://hugodelbegue.fr/">Hugo Delbegue</a>.
+    </div>
   </body>
-
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
   <script src="https://unpkg.com/vue-cookies@1.8.2/vue-cookies.js"></script>
