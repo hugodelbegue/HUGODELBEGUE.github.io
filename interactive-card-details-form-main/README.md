@@ -92,7 +92,7 @@ Thereafter, I will work on the simplification of the forms, the management of th
 
 ## Author
 
-- Website - [hugodelbegue.fr](https://hugodelbegue.fr/)
+- Portfolio - [hugodelbegue.fr](https://hugodelbegue.fr/)
 - Frontend Mentor - [@hugodelbegue](https://www.frontendmentor.io/profile/HUGODELBEGUE)
 - GitHub - [HUGODELBEGUE](https://github.com/HUGODELBEGUE)
 

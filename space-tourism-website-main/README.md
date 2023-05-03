@@ -63,7 +63,7 @@ I will continue to practice the routing, and the different measures in responsiv
 
 ## Author
 
-- Website - [hugodelbegue.fr](https://hugodelbegue.fr/)
+- Portfolio - [hugodelbegue.fr](https://hugodelbegue.fr/)
 - Frontend Mentor - [@hugodelbegue](https://www.frontendmentor.io/profile/HUGODELBEGUE)
 - GitHub - [hugodelbegue](https://github.com/hugodelbegue)
 
