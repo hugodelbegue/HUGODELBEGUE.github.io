@@ -1,1 +1,0 @@
-import{_ as e,o as c,c as s}from"./index-74b1d623.js";const _={},o={class:"wrapper-display-projects middle"};function t(r,a){return c(),s("section",o," PROJECTS ")}const p=e(_,[["render",t],["__scopeId","data-v-508fcc92"]]);export{p as D};
