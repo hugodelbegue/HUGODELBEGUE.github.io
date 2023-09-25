@@ -1,0 +1,1 @@
+import{_ as e,o as r,c}from"./index-55772dd6.js";const t={},o={class:"wrapper-interior-architecture space-header"};function s(n,a){return r(),c("section",o," ARCHITECTURE INTERIEUR ")}const i=e(t,[["render",s]]);export{i as default};
