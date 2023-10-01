@@ -1,1 +1,0 @@
-import{_ as e,o,c as r}from"./index-0b5b6e17.js";const c={},s={class:"wrapper-blog frameworkX frameworkY"};function t(a,n){return o(),r("section",s," BLOG ")}const f=e(c,[["render",t]]);export{f as default};
