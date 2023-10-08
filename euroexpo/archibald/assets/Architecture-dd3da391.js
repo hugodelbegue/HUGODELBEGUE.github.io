@@ -1,1 +1,0 @@
-import{_ as e,o as c,c as r}from"./index-55772dd6.js";const t={},s={class:"wrapper-architecture space-header"};function o(a,n){return c(),r("section",s," ARCHITECTURE ")}const i=e(t,[["render",o]]);export{i as default};

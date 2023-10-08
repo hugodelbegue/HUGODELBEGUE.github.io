@@ -1,1 +1,0 @@
-import{_ as e,o as c,c as t}from"./index-55772dd6.js";const a={},r={class:"wrapper-naval-architecture space-header"};function s(o,n,p,_,i,l){return c(),t("section",r," ARCHITECTURE NAVAL ")}const f=e(a,[["render",s]]);export{f as default};
