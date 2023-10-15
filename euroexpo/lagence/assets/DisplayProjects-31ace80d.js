@@ -1,1 +1,0 @@
-import{_ as s,o as c,c as o,p as t,b as _,d as a}from"./index-fe26b934.js";const p={},d=e=>(t("data-v-93c071f9"),e=e(),_(),e),n={class:"wrapper-display-projects middle"},r=d(()=>a("div",{class:"display-projects-content"}," PROJECTS ",-1)),i=[r];function l(e,f){return c(),o("section",n,i)}const y=s(p,[["render",l],["__scopeId","data-v-93c071f9"]]);export{y as D};
