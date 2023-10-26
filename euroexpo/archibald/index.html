@@ -2,14 +2,63 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/euroexpo/archibald/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/euroexpo/lagence/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Archibald</title>
-    <script type="module" crossorigin src="/euroexpo/archibald/assets/index-20b9f080.js"></script>
-    <link rel="stylesheet" href="/euroexpo/archibald/assets/index-58d1e4cc.css">
+    <title>L'agence</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .loading {
+        --color-animation: #f1f1f1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #1b174a;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        z-index: 10;
+      }
+      .loading::before {
+        content: "";
+        background-color: var(--color-animation);
+        width: 100px;
+        height: 1px;
+      }
+      .loading::after {
+        content: "";
+        background-color: var(--color-animation);
+        width: 10px;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        animation: tempo 1500ms linear infinite;
+      }
+      @keyframes tempo {
+        0%,
+        100% {
+          transform: translateX(0px);
+        }
+        50% {
+          transform: translateX(-110px);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/euroexpo/lagence/assets/index-4520eff0.js"></script>
+    <link rel="stylesheet" href="/euroexpo/lagence/assets/index-08fcaf14.css">
   </head>
   <body>
+    <div class="loading"></div>
     <div id="app"></div>
+    <script>
+      const load = document.querySelector(".loading");
+      document.body.style.overflow = "hidden";
+      window.addEventListener("load", () => {
+        document.body.style = "";
+        load.remove();
+      });
+    </script>
     
   </body>
 </html>
