@@ -5,48 +5,15 @@
     <link rel="icon" href="/euroexpo/archibald/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Archibald</title>
-    <style>
-      body {
-        margin: 0;
-      }
-      .loading {
-        --color-animation: #3a3a3a;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background: #fff;
-        display: flex;
-        place-content: center;
-        place-items: center;
-        z-index: 10;
-      }
-      .loading::before {
-        content: "";
-        background-color: var(--color-animation);
-        width: 100px;
-        height: 1px;
-      }
-      .loading::after {
-        content: "";
-        background-color: var(--color-animation);
-        width: 10px;
-        height: auto;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        animation: tempo 1500ms linear infinite;
-      }
-      @keyframes tempo {
-        0%,
-        100% {
-          transform: translateX(0px);
-        }
-        50% {
-          transform: translateX(-110px);
-        }
-      }
-    </style>
-    <script type="module" crossorigin src="/euroexpo/archibald/assets/index-5de6b1fd.js"></script>
-    <link rel="stylesheet" href="/euroexpo/archibald/assets/index-d1d4a6c5.css">
+    <script
+      type="module"
+      crossorigin
+      src="/euroexpo/archibald/assets/index-5207a2d7.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="/euroexpo/archibald/assets/index-41514c7e.css"
+    />
   </head>
   <body>
     <div class="loading"></div>
@@ -59,6 +26,5 @@
         load.remove();
       });
     </script>
-    
   </body>
 </html>
