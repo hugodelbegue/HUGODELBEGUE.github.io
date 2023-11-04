@@ -11,6 +11,7 @@
       }
       .loading {
         --color-animation: #3a3a3a;
+        --size-line: 3px;
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -20,33 +21,33 @@
         place-items: center;
         z-index: 10;
       }
-      .loading::before {
-        content: "";
-        background-color: var(--color-animation);
-        width: 100px;
-        height: 1px;
-      }
+      .loading::before,
       .loading::after {
         content: "";
-        background-color: var(--color-animation);
-        width: 10px;
+        position: absolute;
+        border: var(--size-line) solid var(--color-animation);
+        width: 100px;
         height: auto;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        animation: tempo 1500ms linear infinite;
+        aspect-ratio: 1 / 1;
       }
-      @keyframes tempo {
-        0%,
-        100% {
-          transform: translateX(0px);
+      .loading::before {
+        animation: rotateLoading 5000ms ease infinite;
+      }
+      .loading::after {
+        transform: rotate(45deg);
+        animation: rotateLoading 2500ms ease infinite reverse;
+      }
+      @keyframes rotateLoading {
+        from {
+          transform: rotate(0deg);
         }
-        50% {
-          transform: translateX(-110px);
+        to {
+          transform: rotate(360deg);
         }
       }
     </style>
-    <script type="module" crossorigin src="/euroexpo/archibald/assets/index-5de6b1fd.js"></script>
-    <link rel="stylesheet" href="/euroexpo/archibald/assets/index-d1d4a6c5.css">
+    <script type="module" crossorigin src="/euroexpo/archibald/assets/index-ffa36769.js"></script>
+    <link rel="stylesheet" href="/euroexpo/archibald/assets/index-b34ff029.css">
   </head>
   <body>
     <div class="loading"></div>
