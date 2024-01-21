@@ -1,0 +1,130 @@
+{
+    "stands-list":  [
+        {
+            "id": 1,
+            "taxonomy": "traditional",
+            "stand-name": "Horiba",
+            "surface": "50m²",
+            "exhibition-name": "Medlab",
+            "city": "Dubai",
+            "date": "2023",
+            "pictures": [
+                { "file": "Medlab-2023-Horiba-Dubai-1",
+                "ext": "jpg" },
+                { "file": "Medlab-2023-Horiba-Dubai-2",
+                "ext": "jpg" }
+            ]
+        },
+        {
+            "id": 2,
+            "taxonomy": "modular",
+            "stand-name": "Poma",
+            "surface": "250m²",
+            "exhibition-name": "RNTP",
+            "city": "Clermont Ferrand",
+            "date": "2023",
+            "pictures": [
+                { "file": "RNTP-2023-POMA-Clermont-Ferrand-1",
+                "ext": "jpg" },
+                { "file": "RNTP-2023-POMA-Clermont-Ferrand-2",
+                "ext": "jpg" },
+                { "file": "RNTP-2023-POMA-Clermont-Ferrand-3",
+                "ext": "jpg" }
+            ]
+        },
+        {
+            "id": 3,
+            "taxonomy": "modular",
+            "stand-name": "Septeo",
+            "surface": "250m²",
+            "exhibition-name": "Rent",
+            "city": "Paris",
+            "date": "2023",
+            "pictures": [
+                { "file": "Septeo-Rent-Paris-1",
+                "ext": "jpg" },
+                { "file": "Septeo-Rent-Paris-2",
+                "ext": "jpg" },
+                { "file": "Septeo-Rent-Paris-3",
+                "ext": "jpg" },
+                { "file": "Septeo-Rent-Paris-4",
+                "ext": "jpg" },
+                { "file": "Septeo-Rent-Paris-5",
+                "ext": "jpg" }
+            ]
+        },
+        {
+            "id": 4,
+            "taxonomy": "modular",
+            "stand-name": "Stago",
+            "surface": "250m²",
+            "exhibition-name": "ISTH",
+            "city": "Montréal",
+            "date": "2023",
+            "pictures": [
+                { "file": "Stago-ISTH-2023-Montréal-1",
+                "ext": "jpg" },
+                { "file": "Stago-ISTH-2023-Montréal-2",
+                "ext": "jpg" }
+            ]
+        },
+        {
+            "id": 5,
+            "taxonomy": "modular",
+            "stand-name": "Synapcell",
+            "surface": "250m²",
+            "exhibition-name": "Neurosciences",
+            "city": "Washington",
+            "date": "2023",
+            "pictures": [
+                { "file": "Synapcell-Neurosciences-2023-Washington-1",
+                "ext": "jpg" },
+                { "file": "Synapcell-Neurosciences-2023-Washington-2",
+                "ext": "jpg" },
+                { "file": "Synapcell-Neurosciences-2023-Washington-3",
+                "ext": "jpg" }
+            ]
+        },
+        {
+            "id": 6,
+            "taxonomy": "modular",
+            "stand-name": "Ifm",
+            "surface": "250m²",
+            "exhibition-name": "USF",
+            "city": "Nantes",
+            "date": "2023",
+            "pictures": [
+                { "file": "USF-2023-Nantes-1",
+                "ext": "jpg" }
+            ]
+        },
+        {
+            "id": 7,
+            "taxonomy": "modular",
+            "stand-name": "Baw",
+            "surface": "250m²",
+            "exhibition-name": "USF",
+            "city": "Nantes",
+            "date": "2023",
+            "pictures": [
+                { "file": "USF-2023-Nantes-2",
+                "ext": "jpg" }
+            ]
+        },
+        {
+            "id": 8,
+            "taxonomy": "modular",
+            "stand-name": "Applium",
+            "surface": "250m²",
+            "exhibition-name": "USF",
+            "city": "Nantes",
+            "date": "2023",
+            "pictures": [
+                { "file": "USF-2023-Nantes-3",
+                "ext": "jpg" },
+                { "file": "USF-2023-Nantes-4",
+                "ext": "jpg" }
+            ]
+        }
+    ]
+}
