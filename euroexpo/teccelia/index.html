@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/euroexpo/teccelia-app/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teccelia - L'oiseau blanc</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .loading {
+        background: #f1f1f1;
+        position: fixed;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        width: 100vw;
+        height: 100vh;
+        z-index: 30;
+      }
+      .loading::before {
+        content: url(/euroexpo/teccelia-app/assets/Logo-UI3lXIP4.png);
+        width: 100px;
+        opacity: 0;
+        animation: start 1000ms both;
+      }
+      @keyframes start {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/euroexpo/teccelia-app/assets/index-HAbh3MyH.js"></script>
+    <link rel="stylesheet" crossorigin href="/euroexpo/teccelia-app/assets/index-8-xF7QV-.css">
+  </head>
+  <body>
+    <div class="loading"></div>
+    <div id="app"></div>
+    <script>
+      const load = document.querySelector(".loading");
+      document.body.style.overflow = "hidden";
+      window.addEventListener("load", () => {
+        document.body.style = "";
+        load.remove();
+      });
+    </script>
+  </body>
+</html>
