@@ -1,0 +1,1 @@
+import{_ as e,c as s,o as c,p as t,d as n,a}from"./index-x_hla-VT.js";const d={},_=o=>(t("data-v-811283e3"),o=o(),n(),o),i={class:"animation-opacity animation-loading"},p=_(()=>a("div",{class:"wrapper-floor-plan"},[a("div",{id:"floor-plan"})],-1)),r=[p];function l(o,f){return c(),s("section",i,r)}const m=e(d,[["render",l],["__scopeId","data-v-811283e3"]]);export{m as default};
