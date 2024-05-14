@@ -1,13 +1,14 @@
 :root {
     // layout
-    --desktop: 1440px;
+    --desktop: 1330px;
     --tablet: 1024px;
     --mobile: 767px;
     --logo-size: 300px;
-    --corner-box: 3px;
-    --space-gallery: 10px;
+    --corner-box: 10px;
+    --space-gallery: 5px;
     --space-feature: 60px;
     --space-step: 20px;
+    --space-between-block: 40px;
     --height-space-top: 20px;
     --height-padding-y-logo: 20px;
     --height-menu: 0px;
@@ -90,7 +91,9 @@
     --accent: var(--orange);
     --important-color: var(--accent);
     --opaque-color: var(--black-opaque);
-    --color-title-strong: linear-gradient(120deg, var(--primary), var(--accent));
+    // TODO: voir pour la deuxième couleur
+    --color-title-strong: linear-gradient(120deg, var(--f-color), var(--accent));
+    // --color-title-strong: linear-gradient(120deg, var(--primary), var(--accent));
     --color-line-between-text: var(--black-very-opaque);
     --color-border-box: var(--orange-5);
     --color-shadow-box: var(--orange-3);
@@ -143,7 +146,7 @@
     --green: #4caf50;
     --purple-light:#dedae5;
     --red: #ea6153;
-    --orange: #ffa500;
+    --orange: #f5b026;
     --orange-1: #f6c05e;
     --orange-2: #b37400;
     --orange-3: #ffc87b;
